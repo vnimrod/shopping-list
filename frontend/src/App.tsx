@@ -1,9 +1,17 @@
-import './App.css';
+import './App.scss';
+import './styles/globals.scss';
+import Layout from './components/layout/layout';
+import Navbar from './components/layout/navbar/navbar';
+import ShoppingSection from './features/shopping-section/shopping-section';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <>
+      <Layout>
+        <Navbar></Navbar>
+        <ShoppingSection></ShoppingSection>
+      </Layout>
+    </>
   );
 }
 

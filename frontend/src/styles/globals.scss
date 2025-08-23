@@ -1,0 +1,18 @@
+// @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat&family=Raleway:wght@400&display=swap');
+@import '../utils/scss-variables/scss-variables';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  // background-color: $rosybrown;
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

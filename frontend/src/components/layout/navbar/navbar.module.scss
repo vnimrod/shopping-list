@@ -1,0 +1,19 @@
+@import '../../../utils/scss-variables/scss-variables';
+
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $yellow-300;
+  padding: 14px;
+  height: 70px;
+  width: 100%;
+}
+
+.NavbarLeft {
+  display: flex;
+}
+
+.NavbarRight {
+  display: flex;
+}
