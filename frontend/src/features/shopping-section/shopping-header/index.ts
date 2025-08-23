@@ -1,1 +1,1 @@
-export * from './shopping-header';
+export { default } from './shopping-header';

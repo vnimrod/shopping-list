@@ -1,6 +1,6 @@
 import React from 'react';
 import ShoppingList from './shopping-list/shopping-list';
-import AddNewItem from '../addNewItem/add-new-item';
+import AddNewItem from '../add-new-item';
 import styles from './shopping-section.module.scss';
 
 const ShoppingSection = () => {

@@ -1,1 +1,1 @@
-export * from './shopping-section';
+export { default }from './shopping-section';

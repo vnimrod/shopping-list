@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { language } from '../../services/language';
-import { getTexts } from './translations/index';
+import { getTexts } from './translations';
 
 // זמנית לשינוי שפה
 export function useForceUpdate() {

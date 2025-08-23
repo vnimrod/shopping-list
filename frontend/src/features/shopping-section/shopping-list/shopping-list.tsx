@@ -1,6 +1,6 @@
 // rafce
 import React, { useState } from 'react';
-import ShoppingItem from '../shopping-item/shopping-item';
+import ShoppingItem from '../shopping-item';
 import styles from './shopping-list.module.scss';
 
 const ShoppingList = () => {
