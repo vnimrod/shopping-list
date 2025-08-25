@@ -1,3 +1,5 @@
+@import '../../../utils/scss-variables/scss-variables';
+
 $drawer-width: 300px;
 $backdrop-color: rgba(0, 0, 0, 0.35);
 $border-color: #eee;
@@ -16,18 +18,15 @@ $border-color: #eee;
   flex-direction: column;
   top: 0;
   left: 0;
-  /* מגירה שמאלית */
   height: 100dvh;
-  /* בטוח לניידים */
   width: min(88vw, $drawer-width);
   max-width: $drawer-width;
-  background: #fff;
+  background: $yellow-300;
   box-shadow: 2px 0 16px rgba(0, 0, 0, 0.2);
   border-right: 1px solid $border-color;
   transform: translateX(-100%);
   transition: transform 180ms ease;
   z-index: 1000;
-  /* מעל הרקע */
   padding: 0.75rem 0.75rem 1rem;
 
   &.open {

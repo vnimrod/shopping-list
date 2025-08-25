@@ -2,7 +2,6 @@
 
 .Navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background-color: $yellow-300;
   padding: 14px;
@@ -10,10 +9,20 @@
   width: 100%;
 }
 
-.NavbarLeft {
-  display: flex;
+.TopNav {
+  display: none;
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 }
 
-.NavbarRight {
-  display: flex;
+.LeftDrawer {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: flex;
+  }
 }

@@ -1,0 +1,24 @@
+@import '../../../../utils/scss-variables/scss-variables';
+
+.NavbarList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $yellow-300;
+  width: 100%;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.NavSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}

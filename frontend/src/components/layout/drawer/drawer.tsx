@@ -2,15 +2,21 @@ import React from 'react';
 import styles from './drawer.module.scss';
 import cn from 'classnames';
 
-const Drawer = ({ open, onClose }: { open: boolean; onClose?: () => void }) => {
+const Drawer = ({
+  open,
+  onClose,
+  children,
+}: {
+  open: boolean;
+  onClose?: () => void;
+  children: any;
+}) => {
   return (
     <>
       {open && <div className={styles.backdrop} onClick={onClose} />}
+
       <div className={cn(styles.Drawer, { [styles.open]: open })}>
-        <div>LOGO</div>
-        <div>MY LISTS / הרשימות שלי</div>
-        <div>Grocery Lists / רשימת מוצרים</div>
-        <div>favorites / מועדפים</div>
+        {children}
       </div>
     </>
   );

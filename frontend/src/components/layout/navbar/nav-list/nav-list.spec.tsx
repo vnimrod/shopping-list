@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import Drawer from './drawer';
+import NavList from './nav-list';
 
-test('renders Drawer component', () => {
-  render(<Drawer open={true}>drawer</Drawer>);
+test('renders NavList component', () => {
+  render(<NavList />);
   expect(screen.getByText(/add item/i)).toBeInTheDocument();
 });
