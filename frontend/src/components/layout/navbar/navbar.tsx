@@ -8,15 +8,14 @@ const Navbar = () => {
 
   return (
     <nav className={styles.Navbar}>
-      <div className={styles.TopNav}>
-        <NavList></NavList>
-      </div>
-
       <div className={styles.LeftDrawer}>
         <button onClick={() => setOpen(true)}>☰</button>
         <Drawer open={open} onClose={() => setOpen(false)}>
-          <NavList></NavList>
+          <NavList isLeftDrawer={open}></NavList>
         </Drawer>
+      </div>
+      <div className={styles.TopNav}>
+        <NavList></NavList>
       </div>
     </nav>
   );

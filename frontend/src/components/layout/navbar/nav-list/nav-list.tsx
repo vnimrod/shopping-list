@@ -1,19 +1,24 @@
 import React from 'react';
 import styles from './nav-list.module.scss';
 import { language } from '../../../../services/language';
+import cn from 'classnames';
 
-const NavList = () => {
+const NavList = ({ isLeftDrawer }: { isLeftDrawer?: boolean }) => {
   return (
-    <div className={styles.NavbarList}>
+    <div className={cn(styles.NavbarList, isLeftDrawer && styles.LeftDrawer)}>
       <div className={styles.NavSection}>
         <div>LOGO</div>
 
-        <div>MY LISTS / הרשימות שלי</div>
-        <div>Grocery Lists / רשימת מוצרים</div>
-        <div>favorites / מועדפים</div>
+        {isLeftDrawer && (
+          <div className={styles.LeftDrawer}>
+            <div>MY LISTS / הרשימות שלי</div>
+            <div>Grocery Lists / רשימת מוצרים</div>
+            <div>favorites / מועדפים</div>
+          </div>
+        )}
       </div>
 
-      <div className={styles.NavSection}>
+      <div className={cn(styles.NavSection, isLeftDrawer && styles.LeftDrawer)}>
         <div>
           {' '}
           {/* will be replaced with component */}
