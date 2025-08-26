@@ -9,7 +9,11 @@ const Navbar = () => {
   return (
     <nav className={styles.Navbar}>
       <div className={styles.LeftDrawer}>
-        <button onClick={() => setOpen(true)}>☰</button>
+        <button className={styles.HamburgerMenuBtn} onClick={() => setOpen(true)}>
+          <span />
+          <span />
+          <span />
+        </button>
         <Drawer open={open} onClose={() => setOpen(false)}>
           <NavList isLeftDrawer={open}></NavList>
         </Drawer>

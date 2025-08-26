@@ -4,13 +4,32 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: $yellow-300;
+  background-color: $emerald-900;
   padding: 14px;
   height: 70px;
   width: 100%;
+  color: $white
 }
 
 .TopNav {
   align-items: center;
   width: 100%;
+}
+
+.HamburgerMenuBtn {
+  width: 2rem;
+  height: 1.5rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 1.5rem;
+    height: 2.5px;
+    background: $white;
+  }
 }
