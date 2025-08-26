@@ -5,7 +5,11 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100%;
+  // height: 100%; only for the top nav
+
+  &.LeftDrawer {
+    margin-top: 6vh;
+  }
 }
 
 .NavSection {
@@ -15,21 +19,26 @@
 }
 
 .LeftDrawer {
+  display: flex;
   flex-direction: column;
   width: 100%;
   align-items: unset;
+  gap: 6px;
+
+  .NavSection {
+    padding-left: 20px;
+  }
 
   .LeftDrawerHello {
     display: flex;
     align-items: center;
+    position: fixed;
     padding-left: 20px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 5vh;
     color: $white;
     background-color: $emerald-900;
-  }
-
-  .NavLeft {
-    padding-left: 20px
   }
 }

@@ -12,23 +12,19 @@ const NavList = ({ isLeftDrawer }: { isLeftDrawer?: boolean }) => {
         {isLeftDrawer && (
           <div className={styles.LeftDrawerHello}>Hello [userName]</div>
         )}
-        <div className={styles.NavLeft}>
-          <span>LOGO</span>
+        <span className={styles.Logo}>LOGO</span>
 
-          {isLeftDrawer && (
-            <div className={styles.LeftDrawer}>
-              <div>MY LISTS / הרשימות שלי</div>
-              <div>Grocery Lists / רשימת מוצרים</div>
-              <div>favorites / מועדפים</div>
-            </div>
-          )}
-        </div>
+        {isLeftDrawer && (
+          <div className={styles.LeftDrawer}>
+            <div>MY LISTS / הרשימות שלי</div>
+            <div>Grocery Lists / רשימת מוצרים</div>
+            <div>favorites / מועדפים</div>
+          </div>
+        )}
       </div>
 
       <div className={cn(styles.NavSection, leftDrawerClass)}>
         <div>
-          {' '}
-          {/* will be replaced with component */}
           <button onClick={() => language.setLanguage('en-us')}>english</button>
           <button onClick={() => language.setLanguage('he-il')}>hebrew</button>
         </div>
