@@ -1,4 +1,39 @@
+@import '../../utils/scss-variables/scss-variables';
+
 .Layout {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+
+.MainBackground {
+  position: absolute;
+  top: 70px;
+  left: 14px;
+  right: 14px;
+  height: 50%;
+  border-radius: 8px;
+  clip-path: ellipse(100% 100% at 50% 0%);
+  background-color: $emerald-900;
+  z-index: -1;
+
+  @media screen and #{$mobileBreak} {
+    height: 30%;
+  }
+}
+
+.GroceryImage {
+  align-self: flex-end;
+  width: 50vh;
+  height: 50vh;
+  position: relative;
+  top: 75px;
+  right: 20px;
+  z-index: 1; /* ensures it's above the clipped bg */
+  
+  @media screen and #{$mobileBreak} {
+    top: 114px;
+    width: 20vh;
+    height: 20vh;
+  }
 }
