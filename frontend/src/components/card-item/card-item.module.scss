@@ -1,0 +1,60 @@
+@import '../../utils/scss-variables/scss-variables';
+
+.cardItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 10vw;
+  height: 10vw;
+  background-color: $emerald-700; // $emerald-700
+  border-radius: 16px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  
+  &:hover {
+    background-color: $emerald-50;
+
+    .icon,
+    .text {
+      color: $emerald-700; // $emerald-700
+      border-color: $emerald-700; // $emerald-700
+    }
+  }
+
+  @media screen and #{$mobileBreak} {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.icon {
+  color: $emerald-50;
+  font-size: 32px;
+  transition: color 0.3s ease;
+  
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.text {
+  color: $emerald-50;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+  max-width: 120px;
+  word-wrap: break-word;
+}

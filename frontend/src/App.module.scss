@@ -1,0 +1,57 @@
+@import './utils/scss-variables/scss-variables';
+
+.CardList {
+  display: flex;
+  position: absolute;
+  top: 370px;
+  left: 140px;
+  min-width: 30%;
+  gap: 14px;
+
+
+  @media screen and #{$mobileBreak} {
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    grid-template-rows: repeat(2, 120px);
+    justify-content: center;
+    align-items: center;
+    top: 150px;
+    left: 0;
+    right: 0;
+    gap: 10px;
+  }
+}
+
+.MainBackground {
+  position: absolute;
+  top: 70px;
+  left: 14px;
+  right: 14px;
+  height: 70%;
+  border-radius: 8px;
+  clip-path: ellipse(100% 100% at 50% 0%);
+  background-color: $emerald-900;
+  z-index: -1;
+
+  @media screen and #{$mobileBreak} {
+    height: 80%;
+    clip-path: ellipse(100% 60% at 50% 35%)
+  }
+}
+
+.GroceryImage {
+  align-self: flex-end;
+  width: 50vh;
+  height: 50vh;
+  position: relative;
+  top: 230px;
+  right: 20px;
+  z-index: 1;
+  /* ensures it's above the clipped bg */
+
+  @media screen and #{$mobileBreak} {
+    top: 420px;
+    width: 20vh;
+    height: 20vh;
+  }
+}

@@ -12,13 +12,13 @@ const NavList = ({ isLeftDrawer }: { isLeftDrawer?: boolean }) => {
         {isLeftDrawer && (
           <div className={styles.LeftDrawerHello}>Hello [userName]</div>
         )}
-        <span className={styles.Logo}>LOGO</span>
+        <span className={styles.Logo}>Note2Cart</span>
 
         {isLeftDrawer && (
           <div className={styles.LeftDrawer}>
             <div>MY LISTS / הרשימות שלי</div>
             <div>Grocery Lists / רשימת מוצרים</div>
-            <div>favorites / מועדפים</div>
+            <div>Favorites / מועדפים</div>
           </div>
         )}
       </div>
