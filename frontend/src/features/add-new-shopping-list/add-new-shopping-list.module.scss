@@ -1,0 +1,36 @@
+@import '../../utils/scss-variables/scss-variables';
+
+.AddNewShoppingList {
+  position: absolute;
+  top: 100px;
+  left: 110px;
+}
+
+.btnPrimary {
+  color: $emerald-50;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.5 ease;
+  background: radial-gradient(50.28% 26.58% at 50.28% 0%, rgba(255, 255, 255, .08) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(129deg, rgba(255, 255, 255, .2) 0%, rgba(255, 255, 255, .1) 100%);
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+
+  .text {
+    color: $emerald-50;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    max-width: 120px;
+
+  }
+
+  &:hover {
+    background-color: $emerald-50;
+
+    .text {
+      color: $black;
+    }
+  }
+}

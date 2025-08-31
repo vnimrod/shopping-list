@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { language } from '../../services/language';
 import { getTexts } from './translations';
+import styles from './add-new-item.module.scss';
 
 // זמנית לשינוי שפה
 export function useForceUpdate() {
@@ -20,7 +21,11 @@ const AddNewItem = () => {
   // זמנית לשינוי שפה
   const texts = getTexts(language.selectedLanguage);
 
-  return <div>{texts.AddNewItem}</div>;
+  return (
+    <div className={styles.AddNewItem}>
+      <button>{texts.AddNewItem}</button>
+    </div>
+  );
 };
 
 export default AddNewItem;
