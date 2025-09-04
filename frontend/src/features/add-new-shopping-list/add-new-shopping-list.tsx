@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const AddNewShoppingList = () => {
   return (
     <div className={styles.AddNewShoppingList}>
-      <Link to="/lists/add">
-        <span className={styles.btnPrimary}>Add New List +</span>
+      <Link className={styles.btnPrimary} to="/lists/add">
+        <span className={styles.text}>Add New List +</span>
       </Link>
     </div>
   );

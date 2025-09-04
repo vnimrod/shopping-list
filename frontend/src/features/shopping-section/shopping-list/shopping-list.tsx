@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import ShoppingItem from '../shopping-item';
 import styles from './shopping-list.module.scss';
+import AddNewItem from '../../add-new-item';
 
 const ShoppingList = () => {
   const [products, setProducts] = useState([
@@ -18,11 +19,21 @@ const ShoppingList = () => {
   ]);
   return (
     <>
-      <ul className={styles.ShoppingList}>
-        {products.map((product) => (
-          <ShoppingItem product={product}></ShoppingItem>
-        ))}
-      </ul>
+      <div className={styles.ListContainer}>
+        <div className={styles.AddButtons}>
+          <button className={styles.btnPrimary}>
+            <span className={styles.text}>new item +</span>
+          </button>
+          <button className={styles.btnPrimary}>
+            <span className={styles.text}>new category +</span>
+          </button>
+        </div>
+        <ul className={styles.ShoppingList}>
+          {products.map((product) => (
+            <ShoppingItem product={product}></ShoppingItem>
+          ))}
+        </ul>
+      </div>
     </>
   );
 };

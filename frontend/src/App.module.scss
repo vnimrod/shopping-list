@@ -30,7 +30,8 @@
   height: 700px;
   border-radius: 8px;
   clip-path: ellipse(100% 100% at 50% 0%);
-  background: linear-gradient(135deg, #064C50, #09A89D);
+  // background: linear-gradient(90deg, #064C50, #064C50);
+  background: linear-gradient(145deg, #064C50 68%, #09A89D);
   @media screen and #{$mobileBreak} {
     height: 80%;
     clip-path: ellipse(100% 60% at 50% 35%)
@@ -42,7 +43,7 @@
   width: 50vh;
   height: 50vh;
   position: absolute;
-  top: 230px;
+  top: 170px;
   right: 20px;
   z-index: 1;
   /* ensures it's above the clipped bg */
