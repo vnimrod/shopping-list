@@ -1,7 +1,9 @@
 import React from 'react';
+import cn from 'classnames';
 import styles from './nav-list.module.scss';
 import { language } from '../../../../services/language';
-import cn from 'classnames';
+import note2cart from '../../../../assets/images/note2cart-logo.png';
+import { Link } from 'react-router-dom';
 
 const NavList = ({ isLeftDrawer }: { isLeftDrawer?: boolean }) => {
   const leftDrawerClass = isLeftDrawer && styles.LeftDrawer;
@@ -12,7 +14,10 @@ const NavList = ({ isLeftDrawer }: { isLeftDrawer?: boolean }) => {
         {isLeftDrawer && (
           <div className={styles.LeftDrawerHello}>Hello [userName]</div>
         )}
-        <span className={styles.Logo}>Note2Cart</span>
+
+      <Link to="/">
+        <img className={styles.Logo} src={note2cart} alt="grocery-main-page" />
+      </Link>
 
         {isLeftDrawer && (
           <div className={styles.LeftDrawer}>

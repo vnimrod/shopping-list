@@ -19,7 +19,7 @@ $backdrop-color: rgba(0, 0, 0, 0.35);
   left: 0;
   height: 100dvh;
   width: 88vw;
-  max-width: 300px;
+  max-width: 450px;
   background-color: $white;
   box-shadow: 2px 0 16px rgba(0, 0, 0, 0.2);
   transform: translateX(-100%);
@@ -29,5 +29,9 @@ $backdrop-color: rgba(0, 0, 0, 0.35);
   &.open {
     transform: translateX(0%);
     transition: transform 180ms ease;
+  }
+
+  @media screen and #{$mobileBreak} {
+    max-width: 300px;
   }
 }

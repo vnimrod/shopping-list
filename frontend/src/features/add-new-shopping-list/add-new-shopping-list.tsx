@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const AddNewShoppingList = () => {
   return (
     <div className={styles.AddNewShoppingList}>
-      <Link className={styles.btnPrimary} to="/lists/add">
+      <Link className={styles.btnPrimary} to="/shopping-lists/add">
         <span className={styles.text}>Add New List +</span>
       </Link>
     </div>
