@@ -1,6 +1,8 @@
+@import '../../utils/scss-variables/scss-variables';
 .Layout {
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: $emerald-50;
 }

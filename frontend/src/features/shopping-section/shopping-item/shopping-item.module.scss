@@ -1,0 +1,216 @@
+@import '../../../utils/scss-variables/scss-variables';
+
+.ShoppingItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 16px;
+  margin: 4px 0;
+  background: linear-gradient(135deg,  $green-50 0%, $emerald-50 100%);
+  border-radius: 8px;
+  border: 1px solid #bbf7d0;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.1);
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: linear-gradient(135deg, $emerald-50 0%, $emerald-100 100%);
+    border-color: $emerald-300;
+    box-shadow: 0 4px 8px rgba(16, 185, 129, 0.15);
+    transform: translateY(-1px);
+  }
+}
+
+.ItemName {
+  flex: 1;
+  font-weight: 600;
+  color: $emerald-700;
+  font-size: 14px;
+}
+
+.ItemQuantity {
+  margin: 0 16px;
+  color: $emerald-500;
+  font-size: 0.9em;
+  font-weight: 500;
+  background-color: $emerald-50;
+  padding: 2px 6px;
+  border-radius: 10px;
+  border: 1px solid $emerald-200;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $emerald-50;
+    border-color: $emerald-400;
+  }
+}
+
+.QuantityInput {
+  margin: 0 16px;
+  color: $emerald-500;
+  font-size: 0.9em;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 12px;
+  border: 1px solid $emerald-300;
+  width: 60px;
+  text-align: center;
+  outline: none;
+
+}
+
+.RemoveButton {
+  background: none;
+  color: $emerald-500;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+
+  &:hover {
+    color: $emerald-500;
+    transform: scale(1.1);
+  }
+}
+
+.CategoryHeader {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  margin: 8px 0 4px 0;
+  font-weight: 700;
+  color: $emerald-700;
+  font-size: 16px;
+  border-bottom: 2px solid $emerald-600;
+  width: fit-content;
+}
+
+.CategoryName {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 2px;
+
+  &:hover {
+    color: $emerald-900;
+  }
+}
+
+.CategoryNameInput {
+  flex: 1;
+  padding: 4px 8px;
+  border: 2px solid $emerald-400;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: $emerald-800;
+  background-color: white;
+  outline: none;
+
+  &:focus {
+    border-color: $emerald-500;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+  }
+}
+
+.ItemActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.AddCategoryButton {
+  background: none;
+  color: $emerald-600;
+  border: 1px solid $emerald-300;
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $emerald-50;
+    border-color: $emerald-400;
+    color: $emerald-700;
+  }
+}
+
+.AddCategoryItem {
+  display: flex;
+  align-items: center;
+  padding: 4px 16px;
+  margin: 2px 0;
+  background-color: $emerald-50;
+  border-radius: 6px;
+  border: 1px solid $emerald-200;
+}
+
+.CategoryInputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.CategoryInput {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid $emerald-300;
+  border-radius: 4px;
+  font-size: 14px;
+  color: $emerald-700;
+  background-color: white;
+  outline: none;
+
+  &:focus {
+    border-color: $emerald-500;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1);
+  }
+}
+
+.SuggestionsList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid $emerald-300;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 150px;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.SuggestionItem {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: $emerald-700;
+  border-bottom: 1px solid $emerald-100;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $emerald-50;
+    color: $emerald-800;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.SuggestionItemSelected {
+  background-color: $emerald-100;
+  color: $emerald-800;
+  font-weight: 500;
+}
